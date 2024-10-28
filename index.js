@@ -24,13 +24,13 @@ document.addEventListener("keydown", event => {
         y <= 0 ? y = 0 : y -= moveAmount;
         break;
       case "ArrowDown":
-        y += moveAmount;
+        y >= 500 ? y = 0 : y += moveAmount;
         break;
       case "ArrowLeft": 
-        x <= 0 ? x -= moveAmount : x = 0;
+        x <= 0 ? x = 0 : x -= moveAmount;
         break;
       case "ArrowRight":
-        x += moveAmount;
+        x >= 600 ? x = 0 : x += moveAmount;
         break;
     }
     myBox.style.top = `${y}px`
