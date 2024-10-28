@@ -27,7 +27,7 @@ document.addEventListener("keydown", event => {
         y += moveAmount;
         break;
       case "ArrowLeft": 
-        x -= moveAmount;
+        x <= 0 ? x -= moveAmount : x = 0;
         break;
       case "ArrowRight":
         x += moveAmount;
